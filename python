@@ -4,7 +4,7 @@ Making everything into piecies until the subproblem got solved.
 properties:
 1. Every recursion property needs a base condition to stop the code.
 
-```python
+```
 
 ```
 
