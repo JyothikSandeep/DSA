@@ -44,8 +44,71 @@ formula:
 If we have two type of burgers one is normal one and another is premium one and we have some amount we need to buy max premium without exceeding cost:
 
 
+
+
+
+
+
         remaining_budget = r - (n * x)
         max_premium_burgers = remaining_budget // (y - x)
         premium_burgers = min(max_premium_burgers, n)
         normal_burgers = n - premium_burgers
         
+Dynamic programming:
+
+
+ In dynamic programming there are some concepts:
+
+ 1D DP:
+
+1.recursion.
+2.Top down approach
+3. bottom up approach
+
+Climbing stairs:
+
+recursions:
+
+```python
+def climb(n):
+    if n <= 2:
+        return n
+    return climb(n-1) + climb(n-2)
+
+```
+
+top down approach:
+
+```python
+def climbStairs(n, dp):
+    if n <= 2:
+        return n
+    if dp[n] != -1:
+        return dp[n]
+    dp[n] = climbStairs(n-1, dp) + climbStairs(n-2, dp)
+    return dp[n]
+
+n = 5
+dp = [-1] * (n+1)
+print(climbStairs(n, dp))  # Output: 8
+
+```
+
+bottom up approach:
+
+```python
+def climbStairs(n):
+    if n <= 2:
+        return n
+    dp = [0] * (n+1)
+    dp[1], dp[2] = 1, 2
+    for i in range(3, n+1):
+        dp[i] = dp[i-1] + dp[i-2]
+    return dp[n]
+
+print(climbStairs(5))  # Output: 8
+
+
+```
+
+
