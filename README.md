@@ -5,59 +5,60 @@ Stack:
 len_stack=3
 stack=[]
 def push(character):
-   if overflow():
-     return("stack too full")
-   else:
-     stack.append(character)
-     return("element has been pushed in stacked")
+    
+    if overflow():
+        return("stack too full")
+    else:
+        stack.append(character)
+        return("element has been pushed in stacked")
 def pop():
-   if nothing():
-     return("cannot delete")
-   else:
-     stack.pop()
-     return ("element has been poped from the list")
+    if nothing():
+        return("cannot delete")
+    else:
+        stack.pop()
+        return ("element has been poped from the list")
 def overflow():
-  if len(stack)>=len_stack:
-    return(True)
-  else:
-    return(False)
+    if len(stack)>=len_stack:
+        return(True)
+    else:
+        return(False)
 def nothing():
-  if len(stack)==0:
-    return(True)
-  else:
-    return(False)
+    if len(stack)==0:
+        return(True)
+    else:
+        return(False)
 def peek():
-  if nothing()==True:
-    return ("there is nothing")
-  else:
-    return(stack[-1])
+    if nothing()==True:
+        return ("there is nothing")
+    else:
+        return(stack[-1])
 def paste():
-  return(stack)
+    return(stack)
 
 while True:
-   print("1. press 1 to push the element")
-   print("2. press 2 to pop the element ")
-   print("3. press 3 to find the peek element ")
-   print("4. press 4 to print the stack ")
-   print("5. press 5 to exit the code ")
-   val1=input()
-   if val1=="1":
-     b=str(input())
-     a=push(b)
-     print(a)
-   elif val1=="2":
-     a=pop()
-     print(a)
-   elif val1=="3":
-     a=peek()
-     print(a)
-   elif val1=="4":
-     a=paste()
-     print(a)
-   elif val1=="5":
-     break
-   else:
-     print("please enter valid input")
+     print("1. press 1 to push the element")
+     print("2. press 2 to pop the element ")
+     print("3. press 3 to find the peek element ")
+     print("4. press 4 to print the stack ")
+     print("5. press 5 to exit the code ")
+    val1=input()
+     if val1=="1":
+        b=str(input())
+        a=push(b)
+        print(a)
+     elif val1=="2":
+        a=pop()
+        print(a)
+     elif val1=="3":
+        a=peek()
+        print(a)
+     elif val1=="4":
+        a=paste()
+        print(a)
+     elif val1=="5":
+        break
+     else:
+         print("please enter valid input")
 
 
 ```
