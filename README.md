@@ -132,14 +132,14 @@ def qempty():
 
 i=0
 while i==i:
-    
- print("1. enqueue")
- print("2. dequeue")
- print("3. head")
- print("4. rear")
- print("5. print queue")
- print("6. end")
- val1=input()
+
+    print("1. enqueue")
+    print("2. dequeue")
+    print("3. head")
+    print("4. rear")
+    print("5. print queue")
+    print("6. end")
+    val1=input()
     if val1=="1":
         a=qenqueue(input())
      print(a)
