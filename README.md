@@ -1,4 +1,4 @@
-Stack:
+# Stack:
 
 ```python
 #Last In First Out LIFO
@@ -59,6 +59,106 @@ while True:
         break
      else:
          print("please enter valid input")
+
+
+```
+
+# Queue
+
+```python
+queue=[]
+head=[-1]
+rear=[-1]
+len_queue=3
+def qenqueue(character):
+# global head
+# global rear
+     if qoverflow():
+         return("Can not enqueue character")
+     else:
+     if head[0]==-1 and rear[0]==-1:
+         head[0]=0
+         rear[0]=0
+         queue.append(character)
+         return("Character was enqued")
+     else:
+         rear[0]=rear[0]+1
+         queue
+        .append
+        (character)
+         return
+        ("Character was enqueued")
+
+
+def qdequeue():
+ #head=-1
+ #rear=-1
+     global queue
+     if qempty():
+        return("Can't dequeue")
+     elif head[0]==rear[0]:
+         head[0]=-1
+         rear[0]=-1
+         queue=[]
+        return("Character was dequeued")
+     else:
+         queue[head[0]]=-1
+         head[0]=head[0]+1
+        return("Character was dequeued")
+
+def qhead():
+     if qempty():
+        return ("No head")
+     else:
+        return(queue[head[0]])
+def qrear():
+     if qempty():
+        return("No rear")
+     else:
+        return(queue[rear[0]])
+def printqueue():
+     print(head[0],rear[0])
+     return(queue[head[0]:rear[0]+1])
+def qoverflow():
+    if len(queue)>=len_queue:
+        return True
+    else:
+        return False
+def qempty():
+    if head[0]==-1 and rear[0]==-1:
+        return True
+    else:
+        return False
+
+i=0
+while i==i:
+    
+ print("1. enqueue")
+ print("2. dequeue")
+ print("3. head")
+ print("4. rear")
+ print("5. print queue")
+ print("6. end")
+ val1=input()
+    if val1=="1":
+        a=qenqueue(input())
+     print(a)
+    elif val1=="2":
+        a=qdequeue()
+        print(a)
+     elif val1=="3":
+        a=qhead()
+        print(a)
+     elif val1=="4":
+        a=qrear()
+        print(a)
+     elif val1=="5":
+        a=printqueue()
+        print(a)
+     elif val1=="6":
+        break
+     else:
+        print("please enter a valid input")
 
 
 ```
