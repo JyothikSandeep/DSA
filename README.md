@@ -62,6 +62,34 @@ while True:
 
 
 ```
+Example pattern of stack concepr:
+Matching paranthesis:
+
+```python
+
+s1=")()"
+l1=[]
+count=0
+for i in range(len(s1)):
+	if s1[i]=="(":
+		l1.append(s1[i])
+		print(l1)
+	elif s1[i]==")":
+		if len(l1)>0:
+			l1.pop()
+			print(l1)
+		elif len(l1)==0:
+			count=count+1
+	else:
+		print("Please enter a valid input")
+		break
+if len(l1)>0 or count>0:
+ print("False")
+else:
+ print("True")
+
+
+```
 
 # Queue
 
