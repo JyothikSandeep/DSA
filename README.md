@@ -191,6 +191,115 @@ while i==i:
 
 ```
 
+Linked List:
+
+```
+head=None
+class Node:
+    def _init_(self,val):
+        self.val=val1
+        self.next=None
+while(1):
+    print(" ")
+    print("press 1 to insert Begin")
+    print("press 2 to insertion at end")
+    print("press 3 to insertion at any pos")
+    print("press 4 to delete at begining")
+    print("press 5 to delete at end")
+    print("press 6 to delete at any postion")
+    print("press 7 to display Linked list")
+    print("press 8 to break")
+    print(" ")
+    option=int(input())
+    if(option==1):
+        val1=int(input("insert at begin value: "))
+        obj1=Node(val1)
+        if(head==None):
+            head=obj1
+        else:
+            obj1.next=head
+            head=obj1
+    elif(option==2):
+        # insert at last
+        val1=int(input("insert at end value: "))
+        obj1=Node(val1)
+        temp=head
+        if(head==None):
+            head=obj1
+        else:
+            while(temp.next!=None):
+                temp=temp.next
+            temp.next=obj1
+    elif(option==3):
+        val1=int(input("insertion at any position value:"))
+        obj1=Node(val1)
+        position=int(input("enter the ppostion: "))
+        
+        pos=0
+        curr=head
+        
+        while(curr!=None ):
+            if(pos==position-1):                
+                break
+            pos=pos+1
+            curr=curr.next
+        if(curr==None):
+            # print("hello")
+            curr=obj1
+            if(head==None):
+                head=obj1
+        else:
+            obj1.next=curr.next
+            curr.next=obj1
+         
+            pos=pos+1
+#         curr
+    elif(option==4):
+      if(head==None):
+        print("It is not possible as you have not yet added a value")
+      else:
+        head=head.next
+    elif(option==5):
+      temp=head
+      if(head==None):
+        print("It is not possible as you have not yet added a value")
+      else:
+        while(temp.next!=None):
+          curr=temp
+          temp=temp.next
+        curr.next=None
+    elif(option==6):
+        poss=int(input("Enter the position which you want to delete"))
+        pos1=0
+        curr=head
+        print(head.val,"-")
+        prev=None
+        if(curr==None):
+          print("It is not possible as you have not yet added a value")
+        else:
+          
+          while(curr!=None ):
+              if(pos1==poss-1):                
+                  break
+              pos1=pos1+1
+              prev=curr
+              curr=curr.next
+          if(curr==None):
+            print("It is not possible as the position you have given has exeeded the length of list")
+          else:
+            after=curr.next
+            prev.next=after
+            curr=curr.next
+    elif(option==7):
+        temp=head
+        while(temp!=None):
+            print(temp.val,end=" ")
+            temp=temp.next
+        print(" ")
+    elif(option==8):
+        break
+```
+
 
 recursions:
 
