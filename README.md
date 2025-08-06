@@ -191,9 +191,16 @@ while i==i:
 
 ```
 
-Linked List:
+# Linked List:
 
-```
+1. Insertion at begining
+2. Insertion at end
+3. Insertiion in any position
+4. Deletion at begining
+5. Deletion at end
+6. Deletion at any position 
+
+``` python
 head=None
 class Node:
     def _init_(self,val):
