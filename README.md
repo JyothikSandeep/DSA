@@ -447,3 +447,96 @@ class Solution:
 
 ```
 
+What is the Fractional Knapsack Problem?
+
+You’re a thief with:
+
+A knapsack (bag) of capacity W.
+
+n items, each with a weight and a value.
+
+Your goal is to maximize total value in your bag.
+But here’s the twist:
+
+You can take fractions of an item (cutting it if needed).
+
+For example, take half of a gold bar if your bag is almost full.
+
+
+🔑 Intuition
+
+This is a pure Greedy problem (no DP needed):
+
+Compute value per weight ratio: value/weight.
+
+Sort items in descending order of ratio.
+
+Take as much as you can from the highest ratio item.
+
+If you can’t take the whole item, take a fraction.
+
+Repeat until the bag is full.
+
+This works because:
+
+Choosing the highest value/weight ratio first always gives an optimal solution when fractional items are allowed.
+
+Input:
+Capacity (W): 50
+Items:
+Weight: [10, 20, 30]
+Value:  [60, 100, 120]
+
+Steps:
+Item	Weight	Value	Value/Weight
+1	10	60	6
+2	20	100	5
+3	30	120	4
+
+Take item 1 fully → bag has 40 left → total = 60
+
+Take item 2 fully → bag has 20 left → total = 60+100=160
+
+Take 20/30 of item 3 → total = 160+ (20 * 4)=160+80=240
+
+✅ Max value = 240.
+
+```python
+
+class Item:
+    def __init__(self, value, weight):
+        self.value = value
+        self.weight = weight
+
+def fractional_knapsack(W, items):
+    # Sort by value-to-weight ratio
+    items.sort(key=lambda x: x.value / x.weight, reverse=True)
+
+    total_value = 0.0
+    for item in items:
+        if W >= item.weight:
+            # Take full item
+            W -= item.weight
+            total_value += item.value
+        else:
+            # Take fraction
+            total_value += item.value * (W / item.weight)
+            break
+    return total_value
+
+# Example usage
+items = [Item(60, 10), Item(100, 20), Item(120, 30)]
+W = 50
+print(f"Maximum value in Knapsack = {fractional_knapsack(W, items)}")
+
+```
+
+LC 1710: Maximum Units on a Truck
+ → Fractional Knapsack variant (take max units with capacity).
+
+LC 1833: Maximum Ice Cream Bars
+ → Similar greedy idea.
+
+[LC 1353: Maximum Number of Events That Can Be Attended] → Scheduling variant.
+
+
