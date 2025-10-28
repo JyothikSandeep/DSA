@@ -834,3 +834,247 @@ def flatten(root):
 
 
 
+# GRAPHS
+⚙️ DAY 1 — Graph Basics + Representation + Traversals
+📘 Concepts
+
+What is a Graph?
+
+Types (Directed, Undirected, Weighted, Unweighted, Cyclic, Acyclic)
+
+Adjacency List vs Matrix
+
+DFS & BFS (recursive + iterative)
+
+BFS for shortest path (unweighted graphs)
+
+💡 LeetCode Problems
+#	Problem	Pattern
+200	Number of Islands	BFS/DFS traversal
+547	Number of Provinces	DFS (adjacency matrix)
+1091	Shortest Path in Binary Matrix	BFS shortest path
+733	Flood Fill	DFS traversal
+695	Max Area of Island	DFS/BFS traversal
+⚔️ Codeforces Problems
+
+580C – Kefa and Park
+ (DFS)
+
+902B – Coloring a Tree
+ (DFS)
+
+510A – Fox And Snake
+ (Traversal logic warmup)
+
+🔗 DAY 2 — Connected Components + Cycle Detection
+📘 Concepts
+
+Connected components in graphs
+
+BFS vs DFS for components
+
+Cycle detection in:
+
+Undirected graphs (DFS parent check)
+
+Directed graphs (recursion stack method)
+
+Bipartite graph check using BFS
+
+💡 LeetCode Problems
+#	Problem	Pattern
+323	Number of Connected Components	DFS/BFS
+261	Graph Valid Tree	DFS + Cycle check
+785	Is Graph Bipartite	BFS 2-coloring
+886	Possible Bipartition	BFS 2-coloring
+207	Course Schedule	Directed cycle detection (Topo sort logic intro)
+⚔️ Codeforces Problems
+
+510B – Fox And Two Dots
+ (Cycle detection)
+
+111A – Petya and Strings
+ (Traversal-based logic)
+
+1131C – Birthday
+ (Connected components thinking)
+
+🧩 DAY 3 — Topological Sort (DAGs)
+📘 Concepts
+
+Directed Acyclic Graph (DAG)
+
+Topological sorting
+
+Kahn’s Algorithm (BFS with indegree)
+
+DFS-based topological sort
+
+Detecting cycles using topological ordering
+
+💡 LeetCode Problems
+#	Problem	Pattern
+207	Course Schedule	Topo sort
+210	Course Schedule II	Return topological order
+802	Find Eventual Safe States	Reverse graph + Topo sort
+269	Alien Dictionary	Build graph + Topo sort
+⚔️ Codeforces Problems
+
+510C – Fox And Names
+ (Alien dictionary type)
+
+601A – The Two Routes
+ (Topo-style traversal)
+
+🧭 DAY 4 — Shortest Path Algorithms
+📘 Concepts
+
+Unweighted → BFS (already done)
+
+Weighted graphs:
+
+Dijkstra’s Algorithm (Min Heap)
+
+Bellman-Ford Algorithm (handles negative weights)
+
+Floyd-Warshall (All-pairs shortest path)
+
+💡 LeetCode Problems
+#	Problem	Pattern
+743	Network Delay Time	Dijkstra
+1631	Path With Minimum Effort	Dijkstra variant
+1514	Path with Maximum Probability	Dijkstra variant
+787	Cheapest Flights Within K Stops	Bellman-Ford variant
+1334	Find City with Smallest Number of Neighbors	Floyd-Warshall
+⚔️ Codeforces Problems
+
+20C – Dijkstra?
+ (Classic Dijkstra)
+
+228E – The Road to Berland
+ (Shortest path concept)
+
+🔮 DAY 5 — Minimum Spanning Tree (MST)
+📘 Concepts
+
+What is an MST
+
+Kruskal’s Algorithm (Union-Find)
+
+Prim’s Algorithm (Priority Queue)
+
+💡 LeetCode Problems
+#	Problem	Pattern
+1584	Min Cost to Connect All Points	Kruskal / Prim
+1135	Connecting Cities with Minimum Cost	Kruskal
+1168	Optimize Water Distribution in a Village	MST variant
+⚔️ Codeforces Problems
+
+609E – Minimum Spanning Tree for Each Edge
+
+888E – Maximum Subsequence
+
+🕸️ DAY 6 — Union-Find (Disjoint Set Union)
+📘 Concepts
+
+Disjoint Set Union (DSU)
+
+find() with path compression
+
+union() by rank/size
+
+Applications:
+
+Kruskal’s Algorithm
+
+Connected components
+
+Detecting cycles efficiently
+
+💡 LeetCode Problems
+#	Problem	Pattern
+547	Number of Provinces (Union-Find version)	
+684	Redundant Connection	
+1319	Number of Operations to Make Network Connected	
+990	Satisfiability of Equality Equations	
+⚔️ Codeforces Problems
+
+25D – Roads not only in Berland
+ (Union-Find)
+
+1167C – News Distribution
+
+🌀 DAY 7 — Advanced Graphs
+📘 Concepts
+
+Directed Acyclic Graph (DAG) DP
+
+Strongly Connected Components (Kosaraju / Tarjan)
+
+Bridges and Articulation Points
+
+Euler path, Hamiltonian path basics
+
+💡 LeetCode Problems
+#	Problem	Pattern
+1192	Critical Connections in a Network	Tarjan’s Algorithm
+207 / 210	Topological order (review)	
+2360	Longest Cycle in a Graph	Cycle detection + DFS
+1557	Minimum Number of Vertices to Reach All Nodes	DAG basics
+⚔️ Codeforces Problems
+
+118E – Bertown Roads
+ (Bridges)
+
+1144F – Graph Without Long Directed Paths
+ (Bipartite check)
+
+🧠 DAY 8–10 (Mastery & Mixed Practice)
+📘 Concepts
+
+Grid-based problems as implicit graphs
+
+Multi-source BFS
+
+Graph coloring
+
+Shortest path with constraints
+
+Revisit all patterns with mixed problems
+
+💡 LeetCode Problems
+#	Problem	Type
+994	Rotting Oranges	Multi-source BFS
+542	01 Matrix	Multi-source BFS
+417	Pacific Atlantic Water Flow	DFS from multiple sources
+286	Walls and Gates	Multi-source BFS
+200, 547, 207, 210	Review all traversal foundations	
+⚔️ Codeforces Ladder (Mixed Graphs Practice)
+
+20C – Dijkstra?
+
+580C – Kefa and Park
+
+25D – Roads not only in Berland
+
+510B – Fox And Two Dots
+
+1167C – News Distribution
+
+118E – Bertown Roads
+
+601A – The Two Routes
+
+💪 Final Outcome
+
+After finishing this roadmap, you’ll be able to:
+
+Implement BFS/DFS/Topo/MST/DSU/Dijkstra/Bellman-Ford/Floyd-Warshall confidently.
+
+Recognize graph patterns instantly (traversal, component, cycle, shortest path).
+
+Solve any LeetCode/Codeforces graph problem efficiently.
+
+Move to advanced topics like Flow Networks, DP on graphs, or A* search if desired.
+
+
